@@ -56,12 +56,23 @@ main {
     flex-direction: column;
 }
 
+#jumbotron {
+    margin-bottom: 30px;
+}
+
 #jumbotron article {
     display: grid;
     grid-template-columns: 30% 30% 30%;
 }
 
 #articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1100px;
+}
+
+#articles div{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -73,12 +84,29 @@ main {
     height: 600px;
     width: 320px;
     border: 1px solid black;
+    background-color: white;
+    box-shadow: 0 0 25px 2px #282a2d;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 12px;
+}
+
+.promotion a {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .product {
-    width: 300px;
+    width: 100%;
     height: 200px;
-    box-shadow: 0 0 25px 2px #282a2d;
+}
+
+#article-price {
+    font-size: 50px;
 }
 
 #free-product {
