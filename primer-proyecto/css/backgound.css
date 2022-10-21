@@ -1,0 +1,181 @@
+body {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: black;
+    color: #F0F2F2;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+header li {
+    list-style: none;
+}
+
+.header-menu {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.header-menu li {
+    margin-left: 50px;
+    margin-right: 50px;;
+}
+
+nav li:hover {
+    color: chartreuse;
+}
+
+main {
+    background-color: #F0F2F2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='812' height='812' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23DADAFF' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23DEDFDE'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    display: flex;
+    flex-direction: column;
+}
+
+#jumbotron article {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+#articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.promotion {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 320px;
+    border: 1px solid black;
+}
+
+.product {
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 25px 2px #282a2d;
+}
+
+#free-product {
+    background-image: url("../images/free-product.jpg");
+}
+
+#premium-product {
+    background-image: url("../images/premium-product.jpg");
+}
+
+#gold-product {
+    background-image: url("../images/gold-product.jpg");
+}
+
+.left-side-jumbotron {
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#email-jumbotron {
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page-name {
+    font-size: 70px;
+    text-align: center;
+}
+
+.message-jumbotron {
+    font-size: 30px;
+    text-align: left;
+}
+
+#additionals {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-images {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 230px 230px 230px;
+}
+
+.coat-one {
+    background-image: url("../images/coat-one.jpg");
+}
+
+.coat-two {
+    background-image: url("../images/coat-two.jpg");
+}
+
+.coat-three {
+    background-image: url("../images/coat-three.jpg");
+}
+
+.coat-four {
+    background-image: url("../images/coat-four.jpg");
+}
+
+.family-tree-one {
+    background-image: url("../images/family-tree-one.jpg");
+}
+
+.family-tree-two {
+    background-image: url("../images/familiy-tree-two.jpg");
+}
+
+.info-author {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: black;
+    color: #F0F2F2;
+    height: 80px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer li:hover {
+    color: chartreuse;
+}
