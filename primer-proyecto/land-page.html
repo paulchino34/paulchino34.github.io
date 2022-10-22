@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav id="nav-header">
-            <img id="nav-icon" src="images/tree-icon.jpg"/>
+            <img id="nav-icon" class="icon" src="images/tree-icon.jpg"/>
             <ul class="header-menu">
                 <li>Precio</li>
                 <li>Funcionalidades</li>
@@ -97,17 +97,25 @@
             </div>
             <article class="flex-column">
                 <p class="h2-title">Acerca del creador</p>
-                <p>Soy un apasionado por el desarrollo web, y en la búsqueda de compartir mis conocimientos con la gente que amo quise crear un lugar en donde podamos poner un poquito de cada uno y encontrar nuestro lugar en la familia, así es como nació <strong>Your Tree</strong></p>
-                <img src="images/creator.jpg">
+                <div class="flex-row" id="div-about-me">
+                    <p>"Soy un apasionado por el desarrollo web, y en la búsqueda de compartir mis conocimientos con la gente que amo quise crear un lugar en donde podamos poner un poquito de cada uno y encontrar nuestro lugar en la familia, así es como nació <br><strong>Your Tree</strong>."</p>
+                    <img id="author-image" class="shadow" src="images/creator.jpg">
+                </div>
                 <div>
                     <p>Redes sociales</p>
+                    <div>
+                        <img class="icon" src="images/face.png"/>
+                        <img class="icon" src="images/insta.png"/>
+                        <img class="icon" src="images/youtube.png"/>
+                    </div>
                 </div>
             </article>
         </section>
     </main>
     <footer>
         <div class="flex-row">
-            <ul>
+            <p>©Copyright 2022</p>
+            <ul id="ul-footer">
                 <li>Registrate</li>
                 <li>Inicio de seción</li>
                 <li>Inicio</li>
@@ -117,7 +125,6 @@
                 <li>Politica de privacidad</li>
                 <li>Contacta con nosotros</li>
             </ul>
-            <p>©Copyright 2022</p>
         </div>
     </footer>
 </body>

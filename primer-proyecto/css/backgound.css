@@ -20,9 +20,12 @@ header {
     width: 100%;
 }
 
-#nav-icon {
+.icon {
     width: 40px;
     height: 40px;
+}
+
+#nav-icon {
     margin-left: 5px;
 }
 
@@ -95,10 +98,10 @@ main {
 }
 
 #articles {
-    height: 1100px;
+    height: 100%;
 }
 
-#articles div{
+#articles div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -124,7 +127,7 @@ main {
 .promotion {
     display: flex;
     flex-direction: column;
-    height: 800px;
+    height: 750px;
     width: 320px;
     background-color: white;
     padding-left: 10px;
@@ -132,9 +135,9 @@ main {
     border-radius: 12px;
 }
 
-.promotion li{
+.promotion li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 .promotion a {
@@ -216,6 +219,14 @@ p {
     background-image: url("../images/familiy-tree-two.jpg");
 }
 
+#div-about-me {
+    width: 80%;
+    justify-content: space-between;
+    gap: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+}
+
 .info-author {
     display: flex;
     flex-direction: column;
@@ -225,6 +236,7 @@ footer {
     background-color: black;
     color: #F0F2F2;
     height: 80px;
+    width: 100%;
 }
 
 footer ul {
@@ -236,8 +248,18 @@ footer ul {
 
 footer li {
     list-style: none;
+    margin-right: 15px;
 }
 
 footer li:hover {
     color: rgb(0, 255, 213);
+}
+
+footer p {
+    margin-left: 15px;
+}
+
+footer .flex-row {
+    justify-content: space-between;
+    width: 95%;
 }
