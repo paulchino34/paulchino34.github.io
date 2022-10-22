@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="images/tree-icon.jpg" />
+        <nav id="nav-header">
+            <img id="nav-icon" src="images/tree-icon.jpg"/>
             <ul class="header-menu">
                 <li>Precio</li>
                 <li>Funcionalidades</li>
@@ -30,15 +30,15 @@
                         <input id="email-jumbotron" name="email" placeholder="Correo electrónico"/>
                     </div>
                 </div>
-                <div>
+                <div class="right-side-jumbotron">
                     <img id="image-jumbotron" src="images/familiy-jumbotron.jpg"/>
                 </div>
             </article>
         </section>
-        <section id="articles">
-            <p id="article-price">Nuestros precios</p>
-            <div>
-                <article class="promotion">
+        <section id="articles" class="flex-column">
+            <h2 class="h2-title">Nuestros precios</h2>
+            <div id="promotions" class="flex-row">
+                <article class="promotion shadow">
                     <div class="image product" id="free-product"></div>
                     <a href="#">Gratis</a>
                     <hr>
@@ -49,7 +49,7 @@
                         <li>Exportar tu árbol genealógico en formato JPEG.</li>
                     </ul>
                 </article>
-                <article class="promotion">
+                <article class="promotion shadow">
                     <div class="image product" id="premium-product"></div>
                     <a href="#">Premium</a>
                     <p>$9.99 Mensuales</p>
@@ -63,7 +63,7 @@
                         <li>Acesso a temas</li>
                     </ul>
                 </article>
-                <article class="promotion">
+                <article class="promotion shadow">
                     <div class="image product" id="gold-product"></div>
                     <a href="#">Gold</a>
                     <p>$14.99 Mensuales</p>
@@ -82,16 +82,21 @@
             </div>
         </section>
         <section id="additionals">
-            <article class="product-images">
-                <div class="image coat-one"></div>
-                <div class="image coat-two"></div>
-                <div class="image coat-three"></div>
-                <div class="image coat-four"></div>
-                <div class="image family-tree-one"></div>
-                <div class="image family-tree-two"></div>
-            </article>
-            <article class="info-author">
-                <p>Acerca del creador</p>
+            <div class="flex-column galery">
+                <h2 class="h2-title">Galería</h2>
+                <article class="product-images">
+                    <div class="image shadow genealogical-tree"></div>
+                    <div class="image shadow coat-one"></div>
+                    <div class="image shadow coat-two"></div>
+                    <div class="image shadow family-tree-one"></div>
+                    <div class="image shadow family-tree-two"></div>
+                    <div class="flex-column">
+                        <p class="page-name">Lo hacemos con el corazón</p>
+                    </div>
+                </article>
+            </div>
+            <article class="flex-column">
+                <p class="h2-title">Acerca del creador</p>
                 <p>Soy un apasionado por el desarrollo web, y en la búsqueda de compartir mis conocimientos con la gente que amo quise crear un lugar en donde podamos poner un poquito de cada uno y encontrar nuestro lugar en la familia, así es como nació <strong>Your Tree</strong></p>
                 <img src="images/creator.jpg">
                 <div>
@@ -101,17 +106,19 @@
         </section>
     </main>
     <footer>
-        <ul>
-            <li>Registrate</li>
-            <li>Inicio de seción</li>
-            <li>Inicio</li>
-            <li>Demo</li>
-            <li>Blog</li>
-            <li>Licencia</li>
-            <li>Politica de privacidad</li>
-            <li>Contacta con nosotros</li>
-        </ul>
-        <p>©Copyrigth 2022</p>
+        <div class="flex-row">
+            <ul>
+                <li>Registrate</li>
+                <li>Inicio de seción</li>
+                <li>Inicio</li>
+                <li>Demo</li>
+                <li>Blog</li>
+                <li>Licencia</li>
+                <li>Politica de privacidad</li>
+                <li>Contacta con nosotros</li>
+            </ul>
+            <p>©Copyright 2022</p>
+        </div>
     </footer>
 </body>
 </html>

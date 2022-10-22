@@ -12,21 +12,29 @@ header {
     height: 50px;
 }
 
-nav {
+#nav-header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#nav-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
 }
 
 .image {
     background-repeat: no-repeat;
     background-size: cover;
+    background-size:100% 100%;
 }
 
-nav img {
-    width: 40px;
-    height: 40px;
-    margin-left: 5px;
+.shadow {
+    border: 1px solid black;
+    box-shadow: 0 0 25px 2px #282a2d;
 }
 
 header li {
@@ -34,7 +42,7 @@ header li {
 }
 
 .header-menu {
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -42,11 +50,11 @@ header li {
 
 .header-menu li {
     margin-left: 50px;
-    margin-right: 50px;;
+    margin-right: 50px;
 }
 
 nav li:hover {
-    color: chartreuse;
+    color: rgb(0, 255, 213);
 }
 
 main {
@@ -57,18 +65,36 @@ main {
 }
 
 #jumbotron {
-    margin-bottom: 30px;
+    margin-bottom: 10%;
 }
 
 #jumbotron article {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.left-side-jumbotron {
+    grid-column: 1 / 3;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side-jumbotron {
+    grid-column: 3 / 6;
+}
+
+#image-jumbotron {
+    width: 100%;
+}
+
+#email-jumbotron {
+    font-size: 20px;
 }
 
 #articles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 1100px;
 }
 
@@ -78,26 +104,44 @@ main {
     justify-content: space-around;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#promotions {
+    justify-content: space-around;
+    width: 80%;
+}
+
 .promotion {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 800px;
     width: 320px;
-    border: 1px solid black;
     background-color: white;
-    box-shadow: 0 0 25px 2px #282a2d;
-    margin-left: 50px;
-    margin-right: 50px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 12px;
+}
+
+.promotion li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
 }
 
 .promotion a {
     text-align: center;
     font-size: 30px;
     font-weight: 100;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .product {
@@ -105,7 +149,7 @@ main {
     height: 200px;
 }
 
-#article-price {
+.h2-title {
     font-size: 50px;
 }
 
@@ -119,18 +163,6 @@ main {
 
 #gold-product {
     background-image: url("../images/gold-product.jpg");
-}
-
-.left-side-jumbotron {
-    margin-left: 20%;
-    margin-right: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#email-jumbotron {
-    font-size: 20px;
 }
 
 p {
@@ -147,38 +179,40 @@ p {
     text-align: left;
 }
 
-#additionals {
-    display: flex;
-    flex-direction: column;
-}
-
 .product-images {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 230px 230px 230px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    gap: 30px;
+    width: 100%;
+}
+
+.galery {
+    margin: 2% 2% 2% 2%;
+}
+
+.genealogical-tree {
+    grid-area: 1 / 1 / 3 /3;
+    background-image: url("../images/genealogical-tree.jpg");
 }
 
 .coat-one {
+    grid-area: 1 / 4 / 3 /3;
     background-image: url("../images/coat-one.jpg");
 }
 
 .coat-two {
+    grid-area: 3 / 1 / 5 / 2;
     background-image: url("../images/coat-two.jpg");
 }
 
-.coat-three {
-    background-image: url("../images/coat-three.jpg");
-}
-
-.coat-four {
-    background-image: url("../images/coat-four.jpg");
-}
-
 .family-tree-one {
+    grid-area: 5 / 2 / 4 / 3;
     background-image: url("../images/family-tree-one.jpg");
 }
 
 .family-tree-two {
+    grid-area: 3 / 3 / 5 / 4;
     background-image: url("../images/familiy-tree-two.jpg");
 }
 
@@ -205,5 +239,5 @@ footer li {
 }
 
 footer li:hover {
-    color: chartreuse;
+    color: rgb(0, 255, 213);
 }
