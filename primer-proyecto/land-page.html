@@ -11,7 +11,7 @@
     <header>
         <nav id="nav-header">
             <img id="nav-icon" class="icon" src="images/tree-icon.jpg"/>
-            <ul class="header-menu">
+            <ul id="header-menu">
                 <li>Precio</li>
                 <li>Funcionalidades</li>
                 <li>Ayuda</li>
@@ -30,9 +30,7 @@
                         <input id="email-jumbotron" name="email" placeholder="Correo electrónico"/>
                     </div>
                 </div>
-                <div class="right-side-jumbotron">
-                    <img id="image-jumbotron" src="images/familiy-jumbotron.jpg"/>
-                </div>
+                <div id="right-side-jumbotron" class="image"></div>
             </article>
         </section>
         <section id="articles" class="flex-column">
@@ -81,8 +79,8 @@
                 </article>
             </div>
         </section>
-        <section id="additionals">
-            <div class="flex-column galery">
+        <section>
+            <div class="galery flex-column">
                 <h2 class="h2-title">Galería</h2>
                 <article class="product-images">
                     <div class="image shadow genealogical-tree"></div>
@@ -91,18 +89,18 @@
                     <div class="image shadow family-tree-one"></div>
                     <div class="image shadow family-tree-two"></div>
                     <div class="flex-column">
-                        <p class="page-name">Lo hacemos con el corazón</p>
+                        <h2 id="galery-message">Lo hacemos con el corazón</h2>
                     </div>
                 </article>
             </div>
             <article class="flex-column">
                 <p class="h2-title">Acerca del creador</p>
-                <div class="flex-row" id="div-about-me">
+                <div id="div-about-me">
                     <p>"Soy un apasionado por el desarrollo web, y en la búsqueda de compartir mis conocimientos con la gente que amo quise crear un lugar en donde podamos poner un poquito de cada uno y encontrar nuestro lugar en la familia, así es como nació <br><strong>Your Tree</strong>."</p>
-                    <img id="author-image" class="shadow" src="images/creator.jpg">
+                    <div id="author-image" class="image shadow"></div>
                 </div>
                 <div>
-                    <p>Redes sociales</p>
+                    <p>Nuestras redes sociales</p>
                     <div>
                         <img class="icon" src="images/face.png"/>
                         <img class="icon" src="images/insta.png"/>
@@ -115,7 +113,7 @@
     <footer>
         <div class="flex-row">
             <p>©Copyright 2022</p>
-            <ul id="ul-footer">
+            <ul>
                 <li>Registrate</li>
                 <li>Inicio de seción</li>
                 <li>Inicio</li>
