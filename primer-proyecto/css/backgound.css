@@ -18,6 +18,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
 }
 
 .icon {
@@ -97,6 +98,9 @@ main {
 
 #articles {
     height: 900%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #articles div {
@@ -118,6 +122,9 @@ main {
 }
 
 #promotions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     width: 90%;
     gap: 30px;
@@ -279,13 +286,52 @@ footer .flex-row {
     width: 95%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
     header {
-        width: 100%;
+        width: 1024px;
     }
 
-    #nav-header {
-        height: 100%;
+    main {
+        width: 1024px;
+    }
+
+    footer {
+        width: 1024px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        width: 750px
+    }
+
+    main {
+        width: 750px
+    }
+
+    footer {
+        width: 750px;
+    }
+
+    #promotion {
+        height: auto;
+        width: 200px;
+    }
+
+    .promotion ul {
+        padding-inline-start: 20px
+    }
+
+    .promotion li {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        width: 100%;
     }
 
     #header-menu {
@@ -304,6 +350,7 @@ footer .flex-row {
     #jumbotron article {
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: auto;
     }
 
@@ -314,7 +361,7 @@ footer .flex-row {
     }
 
     #right-side-jumbotron {
-        width: auto;
+        width: 350px;
         height: 250px;
         margin: 15px;
     }
@@ -355,25 +402,29 @@ footer .flex-row {
     .product-images {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 5px;
         width: 100%;
     }
 
     .coat-one {
         height: 350px;
-
+        width: 300px;
     }
     
     .coat-two {
         height: 350px;
+        width: 300px;
     }
     
     .family-tree-one {
         height: 350px;
+        width: 300px;
     }
     
     .family-tree-two {
         height: 350px;
+        width: 300px;
     }
 
     #div-about-me {
