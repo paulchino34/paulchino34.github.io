@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <article id="fields">
+                <input type="text" id="inputHiddenId" hidden="true">
+                <label for="lastname">Apellido</label>
+                <input type="text" id="lastname">
+                <label for="accountNumbers">Número de cuentas</label>
+                <input type="text" id="accountNumbers">
+                <label for="email">Correo electrónico</label>
+                <input type="text" id="email">
+                <label for="country">Pais</label>
+                <input type="text" id="country">
+                <label for="accountType">Tipo de cuenta</label>
+                <input type="text" id="accountType">
+            </article>
+            <button onclick="saveOrUpdateFamiliy()">Add family</button>
+        </section>
+        <section>
+            <article>
+                <table id="tblFamilies">
+                    <tr>
+                        <th>Apellido</th>
+                        <th>Número de cuentas</th>
+                        <th>Correo</th>
+                        <th>País</th>
+                        <th>Tipo de cuenta</th>
+                        <th>Acciones</th>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
