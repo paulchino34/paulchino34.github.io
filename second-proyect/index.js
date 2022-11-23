@@ -61,7 +61,6 @@ function loadAllFamilies() {
     }
 }
 
-
 class Family {
     constructor(id, lastname, accountNumbers, email, country, accountType) {
         this.id = id
