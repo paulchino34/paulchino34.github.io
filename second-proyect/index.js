@@ -81,9 +81,13 @@ function loadAllUsers() {
     let persistedUsers = localStorage.getItem('persistedUsers')
     if(!persistedUsers) {
         localStorage.setItem('persistedUsers', JSON.stringify([]))
+        persistedUsers = '[]'
     }
     users = JSON.parse(persistedUsers)
-    users = users.map(user => new User(user.id, user.firstname, user.lastname, user.email, user.country, user.accountType))
+    if(users.length > 0) {
+        users = users.map(user => 
+            new User(user.id, user.firstname, user.lastname, user.email, user.country, user.accountType))
+    }
     let table = document.getElementById('tblUsers')
     if(users.length > 0) {
         users.forEach(user => {

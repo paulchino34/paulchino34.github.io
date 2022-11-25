@@ -1,13 +1,12 @@
 # paulchino34.github.io
-Pagina para presentar el proyecto del primer modulo de ucamp
+Pagina para presentar los proyectos de ucamp
 La siguiente es la url que se debe utilizar para visualizar el resultado final
 
 https://paulchino34.github.io/
 
-En esta pagina se puede visualizar dos links
-1.- Es para visualizar el proyecto como tal
-2.- Es para visualizar el wireframe que se utilizo para diseñar la pagina.
-
+Las paginas para acceder a los proyectos son:
+1.- Primer proyecto https://paulchino34.github.io/primer-proyecto/land-page.html
+2.- Segundo proyecto https://paulchino34.github.io/second-proyect/index.html 
 
 A este repositorio se agrego como colaborador a Raul Gonzalez(blodssvikq)
 
