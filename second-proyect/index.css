@@ -62,11 +62,45 @@ main {
 }
 
 #fields {
-    height: 900%;
+    height: 100%;
     display: grid;
-    grid-template-columns: 25% 55%;
-    width: 100%;
+    grid-template-columns: 130px 250px;
+    width: 90%;
     justify-content: space-around;
+    gap: 4px;
+    background-color: rgba(218, 231, 168, 0.3);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.errorAttibute {
+    background-color: rgba(241, 146, 191, 0.3);
+}
+
+#buttonAction {
+    display: block;
+    width: 90%;
+}
+
+#btnSaveOrUpdate {
+    margin: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background: rgba(67, 154, 189, 0.3)
+}
+
+td {
+    background: rgba(187, 186, 182, 0.3)
+}
+
+#fistMessage {
+    text-align: center;
 }
 
 .flex-column {
@@ -79,14 +113,11 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
-.h2-title {
-    font-size: 50px;
-}
-
-.page-name {
-    font-size: 70px;
+h1 {
+    font-size: 40px;
     text-align: center;
 }
 
@@ -164,20 +195,20 @@ footer .flex-row {
         width: 100%;
     }
 
-    .page-name {
+    h1 {
         font-size: 60px;
         margin-bottom: 20px;
         margin-top: 20px;
     }
 
-    .h2-title {
-        font-size: 25px;
-        margin-bottom: 15px;
-    }
-
-    .shadow {
-        border: 1px solid black;
-        box-shadow: 0 0 5px 1px #282a2d;
+    #fields {
+        display: grid;
+        grid-template-columns:95%;
+        width: 100%;
+        gap: 4px;
+        background-color: rgba(218, 231, 168, 0.3);
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     footer {

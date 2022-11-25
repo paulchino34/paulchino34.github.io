@@ -20,42 +20,52 @@
         <section>
             <article>
                 <h1>
-                    Registro de la cuenta principal
+                    Registra tus familiares
                 </h1>
-                <p>
-                    Registra la información de los miembros de tu familia, para que podamos crear la cuenta de cada uno de ellos y que puedan ingresar a ver tu arbol genealógico
+                <p id="fistMessage">
+                    Registra tus familiares para que puedan acceder!
                 </p>
             </article>
         </section>
         <section>
-            <article>
+            <article class="flex-column ">
                 <div id="fields" class="flex-column">
                     <input type="text" id="inputHiddenId" hidden="true">
+                    <label for="firstname">Nombre</label>
+                    <input type="text" id="firstname" onchange="validateElementById('firstname')">
                     <label for="lastname">Apellido</label>
-                    <input type="text" id="lastname">
-                    <label for="accountNumbers">Número de cuentas</label>
-                    <input type="text" id="accountNumbers">
+                    <input type="text" id="lastname" onchange="validateElementById('lastname')">
                     <label for="email">Correo electrónico</label>
-                    <input type="text" id="email">
+                    <input type="text" id="email" onchange="validateElementById('email')">
                     <label for="country">Pais</label>
-                    <input type="text" id="country">
-                    <label for="accountType">Tipo de cuenta</label>
-                    <input type="text" id="accountType">
+                    <input type="text" id="country" onchange="validateElementById('country')">
+                    <label for="selectAccountType">Tipo de cuenta</label>
+                    <div>
+                        <select id="selectAccountType" onchange="selectValue()">
+                            <option value="" disabled selected>Seleccione un valor</option>
+                            <option value="free">Free</option>
+                            <option value="premium">Premium</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                        <input type="text" hidden="true" id="accountType">
+                    </div>
                 </div>
-                <button onclick="saveOrUpdateFamiliy()">Add family</button>
+                <div id="buttonAction">
+                    <button onclick="saveOrUpdateUsers()" id="btnSaveOrUpdate">Crear</button>
+                </div>
             </article> 
         </section>
         <section class="flex-column">
-            <article>
-                <table id="tblFamilies">
+            <article id="articleData">
+                <table id="tblUsers">
                     <tr>
-                        <th>Apellido</th>
-                        <th>Número de cuentas</th>
+                        <th>Nombres</th>
                         <th>Correo</th>
                         <th>País</th>
                         <th>Tipo de cuenta</th>
                         <th>Acciones</th>
                     </tr>
+                    <p id="pInfoTable" hidden="true">¡No ha ingresado miembro de su familia!</p>
                 </table>
             </article>
         </section>
