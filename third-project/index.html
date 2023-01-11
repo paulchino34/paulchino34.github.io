@@ -41,27 +41,29 @@
 </div>
 </div>
 
-<main>
-    <section>
-        <article>
+<main >
+        <article class="conteiner-table">
             <table id="tblAllPokemons">
                 <tr>
                     <th>Selección</th>
                     <th>Nombre</th>
                 </tr>
             </table>
-            <div>
-                <button id="btnPrevious" onclick="previousPage()">Anterior</button>
-                <button id="btnNext" onclick="nextPage()">Siguiente</button>
-            </div>
-        </article class="grid" >
+        </article> 
+        
+    <div class="grid">
+        <div>
+            <button id="btnPrevious" onclick="previousPage()">Anterior</button>
+            <button id="btnNext" onclick="nextPage()">Siguiente</button>
+        </div>
+
         <article class="graph">
-            <canvas id="myChartWeight"></canvas>
-        </article class="grid" >
-        <article class="graph">
-            <canvas id="myChartHeight"></canvas>
+            <canvas class="graph-size" id="myChartWeight"></canvas>
         </article>
-    </section>
+        <article class="graph1">
+            <canvas class="graph-size"  id="myChartHeight"></canvas>
+        </article>
+    </div>
 </main>
 
 <footer class="footer">

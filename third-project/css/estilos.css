@@ -26,7 +26,6 @@
 	.header{
 		width: 100%;
 		height: 100px;
-		
 		top: 0;
         left: 0;
 	}
@@ -97,6 +96,7 @@
 		position: relative;
 		transition: all 500ms ease;
 		transform: translateX(-100%);
+		z-index: 1;
 	}
 	#btn-menu:checked ~ .container-menu .cont-menu{
 		transform: translateX(0%);
@@ -126,88 +126,128 @@
 	}
     /*Posicion de la tabla y graficas*/
 
-    #tblAllPokemons{
-        width: 30px;
-        height: 30px;
-        margin: 60px 60px 20px;
+	#tblAllPokemons{
         background-color: #fff;
+		position: absolute;
+		margin-left: 100px;
     }
-    #btnPrevious{
+
+	#btnPrevious{
         width: 100px;
         height: 30px;
-        margin: 50px 40px;
         background-color: #fff;
+		position: absolute;
+		margin-top: 460px;
+		left: 60px;
     }
     #btnNext{
         width: 100px;
         height: 30px;
-        margin: 40px 50px ;
         background-color: #fff;
+		position: absolute;
+		margin-top: 460px;
+		left: 200px;
     }
-    #myChartWeight{
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        margin: 25px 0 0 -25px;
-        background-color: #fff;
-    }
-    #myChartHeight{
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        margin: 25px 0 0 -25px;
-        background-color: #fff;
-    }
-
-	.graph{
-		width: 600px;
-		height: 600px;
+	
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 60px;		
+		grid-auto-rows: max-content(200px, auto) ;
 	}
 
-	.footer{
-		height: 70px;
+	.graph{
+		grid-column: 3/5;
+		background-color: #fff;
+		width: 500px;
+		height: 250px;
+	}
+
+	.graph1{
+		grid-column: 3/4;
+		background-color: #fff;
+		width: 500px;
+		height: 250px;
+		margin-bottom: 40px;
+	}
+
+    .footer{
+		height: 80px;
 		background-color: #26282c;
 		display: flex;
 		color: #e1e3e4;
 		justify-content: center;
+		align-items: flex-end;
 	}
 	
 	.foter{
 		margin: 30px 40px;
 	}
-    
-	@media(max-width: 1200px){
-		.graph{
-			width: 500px;
-		}
-	}
 
-	@media(max-width: 1000px){
-		.graph{
-			width: 420px;
-		}
+	      @media(max-width: 940px){
+			.container .menu a{
+				font: 0/0 a;
+                text-shadow: transparent;
+                color: transparent;
+                text-decoration: none;
+			}
+			
+			#tblAllPokemons{
+				width: 300px;
+				margin: 0 30vh;
+			}
 
-		body{
-			background-position: center center;	
-		}
-	}
+			#btnPrevious{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 35vh;
+			}
+			#btnNext{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 50vh;
+			}
+			
 
-	@media(max-width:850px ){
-		.graph{
-			width: 300px;
-	}
+			.grid{
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+				gap: 10px;		
+				grid-auto-rows: max-content(200px, auto) ;
+			}
 
-	.footer{
-        height: 120px;
-        flex-wrap: wrap;
-    }
+			.graph{
+				grid-column: 2/4;
+				grid-row: 3/4;
+				width: 404px;
+				height: 250px;
+				right: 50px;
+			}
+		
+			.graph1{
+				grid-column: 2/4;
+				grid-row: 4/5;
+				width: 404px;
+				height: 250px;
+				margin-bottom: 40px;
+			}
 
-    .foter{
-        margin: 10PX;
-    }
-
+			.footer{
+                height: 120px;
+                flex-wrap: wrap;
+				align-items: center;
+              }
+      
+            .foter{
+                margin: 10PX;
+              }  
 }
+      
+
