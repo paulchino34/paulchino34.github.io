@@ -132,6 +132,10 @@
 		margin-left: 100px;
     }
 
+	.conteiner-table input{
+		width: 60px;
+	}
+
 	#btnPrevious{
         width: 100px;
         height: 30px;
@@ -194,7 +198,7 @@
 			
 			#tblAllPokemons{
 				width: 300px;
-				margin: 0 30vh;
+				margin: 0 20vh;
 			}
 
 			#btnPrevious{
@@ -203,18 +207,18 @@
 				background-color: #fff;
 				position: absolute;
 				margin-top: 460px;
-				left: 35vh;
+				left: 25vh;
 			}
+
 			#btnNext{
 				width: 100px;
 				height: 30px;
 				background-color: #fff;
 				position: absolute;
 				margin-top: 460px;
-				left: 50vh;
+				left: 40vh;
 			}
 			
-
 			.grid{
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
@@ -224,17 +228,17 @@
 			}
 
 			.graph{
-				grid-column: 2/4;
+				grid-column: 1/4;
 				grid-row: 3/4;
-				width: 404px;
+				width: 430px;
 				height: 250px;
 				right: 50px;
 			}
 		
 			.graph1{
-				grid-column: 2/4;
+				grid-column: 1/4;
 				grid-row: 4/5;
-				width: 404px;
+				width: 430px;
 				height: 250px;
 				margin-bottom: 40px;
 			}
@@ -249,5 +253,58 @@
                 margin: 10PX;
               }  
 }
+
+        @media(max-width: 600px){
+
+			#tblAllPokemons{
+				width: 200px;
+				margin: 0 15vh;
+			}
+
+			#btnPrevious{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 10vh;
+			}
+
+			#btnNext{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 30vh;
+			}
+		}
+        
+		@media(max-width: 540px){
+			.graph{
+				grid-column: 1/4;
+				grid-row: 4/5;
+				width: 300px;
+				height: 200px;
+				right: 50px;
+			}
+		
+			.graph1{
+				grid-column: 1/4;
+				grid-row: 5/6;
+				width: 300px;
+				height: 180px;
+				margin-bottom: 40px;
+			}
+
+			.grid{
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(5, 1fr);
+				gap: 10px;		
+				grid-auto-rows: max-content(200px, auto) ;
+			}
+		}
+
       
 
