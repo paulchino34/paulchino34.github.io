@@ -7,13 +7,20 @@
         
 	}
 	body{
+		display: flex;
+        flex-direction: column;
+        align-items: center;  
+	}
+
+	#div{
 		background: url(https://img-s1.onedio.com/id-533c1665587bd3c20e009960/rev-0/w-620/f-jpg/s-504b348813175db21107e009db9cb291e75b47bb.jpg);
 		background-size: 100vw 100vh;
-		background-repeat: no-repeat;
-        background-size: cover;
+		background-size: cover;
 		background-attachment: fixed ;
-        
+		background-repeat: no-repeat;
+
 	}
+
 	.capa{
 		position: fixed;
 		width: 100%;
@@ -140,7 +147,7 @@
         width: 100px;
         height: 30px;
         background-color: #fff;
-		position: absolute;
+		position: static;
 		margin-top: 460px;
 		left: 60px;
     }
@@ -148,7 +155,7 @@
         width: 100px;
         height: 30px;
         background-color: #fff;
-		position: absolute;
+		position: static;
 		margin-top: 460px;
 		left: 200px;
     }
@@ -156,7 +163,7 @@
 	.grid{
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 60px;		
+		gap: 10px;		
 		grid-auto-rows: max-content(200px, auto) ;
 	}
 
@@ -188,6 +195,26 @@
 		margin: 30px 40px;
 	}
 
+	      @media(max-width: 1440px){
+			#btnPrevious{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 60px;
+			}
+			#btnNext{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 200px;
+			}
+
+		  }  
+	    
 	      @media(max-width: 940px){
 			.container .menu a{
 				font: 0/0 a;
