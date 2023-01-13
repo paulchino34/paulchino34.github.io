@@ -28,6 +28,7 @@
 		height: 100px;
 		top: 0;
         left: 0;
+		background-color: #26282c;
 	}
 	.container{
 		width: 90%;
@@ -187,6 +188,7 @@
 	.foter{
 		margin: 30px 40px;
 	}
+	
 
 	      @media(max-width: 940px){
 			.container .menu a{
@@ -227,6 +229,9 @@
 				grid-auto-rows: max-content(200px, auto) ;
 			}
 
+
+
+
 			.graph{
 				grid-column: 1/4;
 				grid-row: 3/4;
@@ -252,8 +257,10 @@
             .foter{
                 margin: 10PX;
               }  
+
 }
 
+<<<<<<< Updated upstream
         @media(max-width: 600px){
 
 			#tblAllPokemons{
@@ -306,5 +313,7 @@
 			}
 		}
 
+=======
+>>>>>>> Stashed changes
       
 
