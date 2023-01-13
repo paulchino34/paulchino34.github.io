@@ -198,6 +198,27 @@
 		margin: 30px 40px;
 	}
 	
+          
+	      @media(max-width: 1440px){
+
+			#btnPrevious{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 60px;
+			}
+			#btnNext{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 200px;
+			}
+
+		  }
 
 	      @media(max-width: 940px){
 			.container .menu a{
