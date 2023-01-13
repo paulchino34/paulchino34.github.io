@@ -6,13 +6,12 @@
 		font-family: 'Montserrat Alternates', sans-serif;
         
 	}
-	body{
+
+	main{
 		background: url(https://img-s1.onedio.com/id-533c1665587bd3c20e009960/rev-0/w-620/f-jpg/s-504b348813175db21107e009db9cb291e75b47bb.jpg);
-		background-size: 100vw 100vh;
 		background-repeat: no-repeat;
         background-size: cover;
 		background-attachment: fixed ;
-        
 	}
 	.capa{
 		position: fixed;
