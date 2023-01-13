@@ -259,7 +259,6 @@
 
 }
 
-<<<<<<< Updated upstream
         @media(max-width: 600px){
 
 			#tblAllPokemons{
@@ -287,6 +286,30 @@
 		}
         
 		@media(max-width: 540px){
+			
+			#tblAllPokemons{
+				width: 300px;
+				margin: 0 5vh;
+			}
+
+			#btnPrevious{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 10vh;
+			}
+
+			#btnNext{
+				width: 100px;
+				height: 30px;
+				background-color: #fff;
+				position: absolute;
+				margin-top: 460px;
+				left: 30vh;
+			}
+
 			.graph{
 				grid-column: 1/4;
 				grid-row: 4/5;
@@ -312,7 +335,5 @@
 			}
 		}
 
-=======
->>>>>>> Stashed changes
       
 
