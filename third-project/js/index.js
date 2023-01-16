@@ -1,28 +1,28 @@
-let previousPageUrl = null
-let nextPageUrl = null
 let selectedPokemons = []
 let dataPokemons = []
 let myChartWeight
 let myChartHeight
 
+import { loadTable, loadButtons } from './elements.js'
+
 window.addEventListener('DOMContentLoaded', (event) => {
     retrievePokemons('https://pokeapi.co/api/v2/pokemon/')
-    persistedSelectedPokemons = localStorage.getItem('selectedPokemons')
+    let persistedSelectedPokemons = localStorage.getItem('selectedPokemons')
     if(!persistedSelectedPokemons) {
         localStorage.setItem('selectedPokemons', JSON.stringify([]))
         persistedSelectedPokemons = '[]'
     }
     selectedPokemons = JSON.parse(persistedSelectedPokemons)
 
-    persistedDataPokemons = localStorage.getItem('dataPokemons')
+    let persistedDataPokemons = localStorage.getItem('dataPokemons')
     if(!persistedDataPokemons) {
         localStorage.setItem('dataPokemons', JSON.stringify([]))
         persistedDataPokemons = '[]'
     }
     dataPokemons = JSON.parse(persistedDataPokemons)
 
-    updateChartWeight()
-    updateChartHeight()
+    updateChartWeight(document, dataPokemons)
+    updateChartHeight(document, dataPokemons)
 })
 
 const retrievePokemons = async (url) => {
@@ -34,47 +34,8 @@ const retrievePokemons = async (url) => {
     })
 
     const data = await response.json()
-    loadTable(data.results)
-    loadButtons(data)
-}
-
-const loadTable = (pokemons) => {
-    let table = document.getElementById('tblAllPokemons')
-    deleteRows(table)
-    if(pokemons.length >= 0) {
-        pokemons.forEach(pokemon => {
-            let rowCount = table.rows.length
-            let row = table.insertRow(rowCount)
-            let checked = selectedPokemons.indexOf(pokemon.url) >= 0 ? 'checked' : ''
-            row.insertCell(0).innerHTML = `<input type="checkbox" value="${pokemon.name}" onclick="editList(this, '${pokemon.url}')" ${checked}/>`
-            row.insertCell(1).innerHTML = pokemon.name
-        })
-    }    
-}
-
-const deleteRows = (table) => {
-    var rowCount = table.rows.length;
-    for (var i = rowCount - 1; i > 0; i--) {
-        table.deleteRow(i);
-    }
-}
-
-const loadButtons = (allDataPokemon) => {
-    let btnPrevious = document.getElementById('btnPrevious')
-    let btnNext = document.getElementById('btnNext')
-    btnPrevious.hidden = allDataPokemon.previous ? false : true
-    btnNext.hidden = allDataPokemon.next ? false : true
-
-    previousPageUrl = allDataPokemon.previous
-    nextPageUrl = allDataPokemon.next
-}
-
-const previousPage = () => {
-    retrievePokemons(previousPageUrl)
-}
-
-const nextPage = () => {
-    retrievePokemons(nextPageUrl)
+    loadTable(data.results, selectedPokemons, document)
+    loadButtons(data, document)
 }
 
 const editList = (element, pokemon) => {
@@ -86,7 +47,6 @@ const editList = (element, pokemon) => {
         selectedPokemons.splice(index, 1)
         removeDataOfAPokemon(element.value)
     }
-    console.log(selectedPokemons)
 }
 
 const retrieveDataOfPokemon = async (url) => {
@@ -106,9 +66,9 @@ const retrieveDataOfPokemon = async (url) => {
 
     dataPokemons.push(element)
 
-    updateDataInLocalStorage()
-    updateChartWeight()
-    updateChartHeight()
+    updateDataInLocalStorage(selectedPokemons, dataPokemons)
+    updateChartWeight(document, dataPokemons)
+    updateChartHeight(document, dataPokemons)
 }
 
 const removeDataOfAPokemon = (pokemonName) => {
@@ -120,17 +80,17 @@ const removeDataOfAPokemon = (pokemonName) => {
         return false
     })
 
-    updateDataInLocalStorage()
-    updateChartWeight()
-    updateChartHeight()
+    updateDataInLocalStorage(selectedPokemons, dataPokemons)
+    updateChartWeight(document, dataPokemons)
+    updateChartHeight(document, dataPokemons)
 }
 
-const updateDataInLocalStorage = () => {
+const updateDataInLocalStorage = (selectedPokemons, dataPokemons) => {
     localStorage.setItem('selectedPokemons', JSON.stringify(selectedPokemons))
     localStorage.setItem('dataPokemons', JSON.stringify(dataPokemons))
 }
 
-const updateChartWeight = () => {
+const updateChartWeight = (document, dataPokemons) => {
     let ctx = document.getElementById('myChartWeight')
 
     let names = dataPokemons.map(pokemon => pokemon.name)
@@ -161,7 +121,7 @@ const updateChartWeight = () => {
     myChartWeight = new Chart(ctx, cfg)
 }
 
-const updateChartHeight = () => {
+const updateChartHeight = (document, dataPokemons) => {
     let ctx = document.getElementById('myChartHeight')
 
     let names = dataPokemons.map(pokemon => pokemon.name)
@@ -191,3 +151,5 @@ const updateChartHeight = () => {
     }
     myChartHeight = new Chart(ctx, cfg)
 }
+
+export { retrievePokemons, editList }
